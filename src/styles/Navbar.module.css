@@ -1,0 +1,35 @@
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DDECFE;
+    padding: 15px 30px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+}
+
+.navbar__menu li :hover {
+    color: black;
+    background-color: #C4CCE5;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+
+.link {
+    text-decoration: none;
+    color: black;
+}
