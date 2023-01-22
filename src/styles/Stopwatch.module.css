@@ -6,19 +6,18 @@
     padding: 15rem 0 0;
 }
 
-.btn {
+.time {
+    font-size: 5rem;
+}
+
+.time_btn_ul {
     display: flex;
     padding: 5rem 0 0;
 }
 
-h1 {
-    font-size: 5rem;
-}
-
-button {
+.time_btn_li {
     padding: 2rem;
     margin: 1rem;
-    background: none;
     box-shadow: 0px 0px 3px black;
     border-radius: 30px;
     font-size: 1.5rem;
@@ -27,20 +26,16 @@ button {
 
 @media screen and (max-width:48rem) {
     .container {
-        padding: 10rem 1rem 1rem;
+        padding: 10rem 0 0;
     }
 
-    h1 {
+    .time {
         font-size: 4rem;
     }
 
-    button {
-        padding: 1rem;
-        margin: 1rem;
-        background: none;
-        box-shadow: 0px 0px 3px black;
-        border-radius: 30px;
+    .time_btn_li {
+        padding: 1.3rem;
         font-size: 1rem;
-        background-color: #DDECFE;
+        border-radius: 20px;
     }
 }

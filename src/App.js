@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Main from './routes/Main';
 import Home from './routes/Home';
-import Calendar from './routes/Calendar';
 import Stopwatch from './routes/Stopwatch';
+import DatePicker from './routes/Calendar';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/Calendar">
-          <Calendar />
+          <DatePicker />
         </Route>
         <Route path="/Stopwatch">
           <Stopwatch />

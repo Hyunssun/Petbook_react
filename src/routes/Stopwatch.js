@@ -44,24 +44,32 @@ function Stopwatch() {
 
   return (
     <div className={styles.container}>
-      <h1>
+      <h1 className={styles.time}>
         {hour < 10 ? `0${hour}` : hour}:{min < 10 ? `0${min}` : min}:
         {sec < 10 ? `0${sec}` : sec}
       </h1>
       <section>
-        <ul className={styles.btn}>
+        <ul className={styles.time_btn_ul}>
           <li>
-            <button onClick={reset}>초기화</button>
+            <button className={styles.time_btn_li} onClick={reset}>
+              초기화
+            </button>
           </li>
           <li>
             {!run ? (
-              <button onClick={start}>시작</button>
+              <button className={styles.time_btn_li} onClick={start}>
+                시작
+              </button>
             ) : (
-              <button onClick={stop}>정지</button>
+              <button className={styles.time_btn_li} onClick={stop}>
+                정지
+              </button>
             )}
           </li>
           <li>
-            <button onClick={save}>저장</button>
+            <button className={styles.time_btn_li} onClick={save}>
+              저장
+            </button>
           </li>
         </ul>
       </section>
