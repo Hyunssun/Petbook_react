@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/petbook_react/static/css/main.ce60c071.css",
-    "main.js": "/petbook_react/static/js/main.de6f2fc4.js",
+    "main.css": "/petbook_react/static/css/main.f302486c.css",
+    "main.js": "/petbook_react/static/js/main.60fc552b.js",
     "index.html": "/petbook_react/index.html",
-    "main.ce60c071.css.map": "/petbook_react/static/css/main.ce60c071.css.map",
-    "main.de6f2fc4.js.map": "/petbook_react/static/js/main.de6f2fc4.js.map"
+    "main.f302486c.css.map": "/petbook_react/static/css/main.f302486c.css.map",
+    "main.60fc552b.js.map": "/petbook_react/static/js/main.60fc552b.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce60c071.css",
-    "static/js/main.de6f2fc4.js"
+    "static/css/main.f302486c.css",
+    "static/js/main.60fc552b.js"
   ]
 }
