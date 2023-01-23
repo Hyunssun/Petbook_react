@@ -18,9 +18,7 @@ function Home() {
         </div>
         <form method="post" encType="multipart/form-data">
           <div className={styles.uploadBtn}>
-            <label htmlFor="uploadImg">
-              <img src="/assets/img/camera.png" alt="" />
-            </label>
+            <label htmlFor="uploadImg">➕</label>
           </div>
           <input
             type="file"

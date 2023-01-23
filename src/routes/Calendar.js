@@ -5,16 +5,11 @@ import '../styles/react-datepicker.css';
 import styles from '../styles/Calendar.module.css';
 
 function Calendar() {
-  const [date, setDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date());
 
   return (
     <div className={styles.container}>
-      <DatePicker
-        locale={ko}
-        inline
-        onChange={(date) => setDate(date)}
-        selected={date}
-      />
+      <DatePicker locale={ko} inline onChange={(date) => setStartDate(date)} />
     </div>
   );
 }
