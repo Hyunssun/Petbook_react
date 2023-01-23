@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/petbook_react/static/css/main.b94194a3.css",
+    "main.js": "/petbook_react/static/js/main.71ad22f8.js",
+    "index.html": "/petbook_react/index.html",
+    "main.b94194a3.css.map": "/petbook_react/static/css/main.b94194a3.css.map",
+    "main.71ad22f8.js.map": "/petbook_react/static/js/main.71ad22f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b94194a3.css",
+    "static/js/main.71ad22f8.js"
+  ]
+}
