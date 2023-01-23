@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8rem;
+}
+
+@media screen and (max-width:48rem) {
+    .container {
+        padding: 6rem;
+    }
+
+}

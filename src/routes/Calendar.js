@@ -1,9 +1,20 @@
+import { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import { ko } from 'date-fns/esm/locale';
+import '../styles/react-datepicker.css';
 import styles from '../styles/Calendar.module.css';
 
 function Calendar() {
+  const [date, setDate] = useState(new Date());
+
   return (
-    <div>
-      <h2>Calendar</h2>
+    <div className={styles.container}>
+      <DatePicker
+        locale={ko}
+        inline
+        onChange={(date) => setDate(date)}
+        selected={date}
+      />
     </div>
   );
 }
