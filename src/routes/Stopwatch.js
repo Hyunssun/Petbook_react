@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Stopwatch.module.css';
+import { db } from '../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -30,23 +32,38 @@ function Stopwatch() {
     run ? 1000 : null
   );
 
+  let sec = count % 60 < 10 ? `0${count % 60}` : count % 60;
+  let min =
+    parseInt(count / 60) < 10
+      ? `0${parseInt(count / 60)}`
+      : parseInt(count / 60);
+  let hour =
+    parseInt(count / 3600) < 10
+      ? `0${parseInt(count / 3600)}`
+      : parseInt(count / 3600);
+
   const reset = () => {
     setRun(false);
     setCount(0);
   };
   const start = () => setRun(true);
   const stop = () => setRun(false);
-  const save = () => null;
-
-  let sec = count % 60;
-  let min = parseInt(count / 60);
-  let hour = parseInt(count / 3600);
+  const save = async () => {
+    try {
+      const docRef = await addDoc(collection(db, 'board'), {
+        saveTime: new Date().toLocaleString('ko-kr'),
+        time: `${hour}시간 ${min}분 ${sec}초`,
+      });
+      console.log('Document written with ID: ', docRef.id);
+    } catch (e) {
+      console.error('Error adding document: ', e);
+    }
+  };
 
   return (
     <div className={styles.container}>
       <h1 className={styles.time}>
-        {hour < 10 ? `0${hour}` : hour}:{min < 10 ? `0${min}` : min}:
-        {sec < 10 ? `0${sec}` : sec}
+        {hour}:{min}:{sec}
       </h1>
       <section>
         <ul className={styles.time_btn_ul}>

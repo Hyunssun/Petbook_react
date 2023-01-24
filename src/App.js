@@ -1,29 +1,37 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  withRouter,
+  BrowserRouter,
+} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Main from './routes/Main';
 import Home from './routes/Home';
+import Calendar from './routes/Calendar';
 import Stopwatch from './routes/Stopwatch';
-import DatePicker from './routes/Calendar';
+
+const BaseRouter = withRouter(({ location }) => {
+  return (
+    <div>
+      {location.pathname === '/' ||
+      location.pathname === '/petbook_react' ? null : (
+        <Navbar />
+      )}
+      <Route path={['/', '/petbook_react']} exact={true} component={Main} />
+      <Route path="/home" component={Home} />
+      <Route path="/calendar" component={Calendar} />
+      <Route path="/stopwatch" component={Stopwatch} />
+    </div>
+  );
+});
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route path="/Home">
-          <Home />
-        </Route>
-        <Route path="/Calendar">
-          <DatePicker />
-        </Route>
-        <Route path="/Stopwatch">
-          <Stopwatch />
-        </Route>
-        <Route path="/">
-          <Main />
-        </Route>
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <BaseRouter />
+    </BrowserRouter>
   );
 }
 

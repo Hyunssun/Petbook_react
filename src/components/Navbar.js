@@ -6,17 +6,17 @@ function Navbar() {
     <nav className={styles.navbar}>
       <ul className={styles.navbar__menu}>
         <li>
-          <Link className={styles.link} to={`/Home/`}>
+          <Link className={styles.link} to={`/home`}>
             Home
           </Link>
         </li>
         <li>
-          <Link className={styles.link} to={`/Calendar/`}>
+          <Link className={styles.link} to={`/calendar`}>
             Calendar
           </Link>
         </li>
         <li>
-          <Link className={styles.link} to={`/Stopwatch/`}>
+          <Link className={styles.link} to={`/stopwatch`}>
             Stopwatch
           </Link>
         </li>

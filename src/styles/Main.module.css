@@ -22,7 +22,12 @@
 }
 
 .main_title {
-    padding: 2rem 0 0;
+    padding: 2rem;
+}
+
+.btn_google {
+    width: 191px;
+    height: 46px;
 }
 
 @media screen and (max-width:48rem) {
@@ -41,6 +46,6 @@
     }
 
     .main_title {
-        padding: 1rem 0 0;
+        padding: 1rem;
     }
 }
