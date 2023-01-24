@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Stopwatch.module.css';
 import { db } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
+import * as dateFns from 'date-fns';
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -51,6 +52,7 @@ function Stopwatch() {
   const save = async () => {
     try {
       const docRef = await addDoc(collection(db, 'board'), {
+        saveDay: dateFns.format(new Date(), 'yyyy-MM-dd'),
         saveTime: new Date().toLocaleString('ko-kr'),
         time: `${hour}시간 ${min}분 ${sec}초`,
       });

@@ -507,7 +507,7 @@
 .react-datepicker__quarter-text:hover,
 .react-datepicker__year-text:hover {
   border-radius: 0.3rem;
-  background-color: #f0f0f0;
+  background-color: #C9ABB6;
 }
 
 .react-datepicker__day--today,
@@ -537,14 +537,18 @@
 .react-datepicker__month-text--highlighted-custom-1,
 .react-datepicker__quarter-text--highlighted-custom-1,
 .react-datepicker__year-text--highlighted-custom-1 {
-  color: magenta;
+  border-radius: 0.3rem;
+  background-color: #F2ADC9;
+  color: #fff;
 }
 
 .react-datepicker__day--highlighted-custom-2,
 .react-datepicker__month-text--highlighted-custom-2,
 .react-datepicker__quarter-text--highlighted-custom-2,
 .react-datepicker__year-text--highlighted-custom-2 {
-  color: green;
+  border-radius: 0.3rem;
+  background-color: #F2ADC9;
+  color: #fff;
 }
 
 .react-datepicker__day--selected,
